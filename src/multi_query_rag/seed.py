@@ -1,6 +1,6 @@
-from config import load_config
-from connect import connect
-from db import (
+from multi_query_rag.config import load_config
+from multi_query_rag.connect import connect
+from multi_query_rag.db import (
     enable_pgvector,
     create_vector_table,
     drop_table,
