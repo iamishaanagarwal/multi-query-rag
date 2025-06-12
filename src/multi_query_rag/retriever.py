@@ -1,6 +1,6 @@
 from openai import OpenAI
-from config import load_config
-from connect import connect
+from multi_query_rag.config import load_config
+from multi_query_rag.connect import connect
 from psycopg2.extensions import cursor
 import os
 from dotenv import load_dotenv, find_dotenv

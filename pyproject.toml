@@ -16,5 +16,9 @@ dependencies = [
 rag-query = "multi_query_rag.main:main"
 rag-seed = "multi_query_rag.seed:main"
 
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.setuptools.packages.find]
 where = ["src"]

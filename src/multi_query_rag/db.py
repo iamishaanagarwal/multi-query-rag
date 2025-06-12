@@ -1,12 +1,12 @@
 from typing import Any, Dict, Optional
 import pandas as pd
-from config import load_config
+from multi_query_rag.config import load_config
 from openai import OpenAI
 from psycopg2.extensions import connection, cursor
 import os
 from dotenv import load_dotenv, find_dotenv
 
-from connect import connect
+from multi_query_rag.connect import connect
 
 if not os.environ.get("OPENAI_API_KEY"):
     load_dotenv(find_dotenv())
