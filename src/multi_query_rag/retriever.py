@@ -1,9 +1,9 @@
 from openai import OpenAI
-from multi_query_rag.config import load_config
+from config import load_config
 from typing import Dict, Any
-from multi_query_rag.connect import connect
+from connect import connect
 from psycopg2.extensions import connection, cursor
-from multi_query_rag.db import chunk_text
+from db import chunk_text
 import os
 from dotenv import load_dotenv, find_dotenv
 

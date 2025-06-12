@@ -1,6 +1,6 @@
 import pandas as pd
-from multi_query_rag.connect import connect
-from multi_query_rag.config import load_config
+from connect import connect
+from config import load_config
 from openai import OpenAI
 from psycopg2 import sql
 from psycopg2.extensions import connection, cursor

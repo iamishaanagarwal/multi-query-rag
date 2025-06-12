@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2.extensions import connection
-from multi_query_rag.config import load_config
+from config import load_config
 from typing import Optional, Dict, Any
 
 

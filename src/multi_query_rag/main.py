@@ -1,5 +1,5 @@
-from multi_query_rag.retriever import get_context, generate_answer
-from multi_query_rag.connect import connect, load_config
+from retriever import get_context, generate_answer
+from connect import connect, load_config
 from dotenv import load_dotenv, find_dotenv
 
 

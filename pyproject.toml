@@ -5,11 +5,12 @@ description = "RAG system with multi-query support for medical reports"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "openai>=1.0.0",
-    "psycopg2-binary>=2.9.0",
-    "pandas>=2.0.0",
-    "numpy>=1.24.0",
-    "python-dotenv>=1.0.0"
+    "numpy>=2.3.0",
+    "psycopg2>=2.9.10",
+    "openai>=1.86.0",
+    "pandas>=2.3.0",
+    "python-dotenv>=1.1.0",
+    "psycopg2-binary>=2.9.10",
 ]
 
 [project.scripts]
