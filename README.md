@@ -12,7 +12,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/iamishaanagarwal/multi-query-rag.git
    cd "multi-query rag"
    ```
 
