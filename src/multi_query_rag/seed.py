@@ -3,7 +3,6 @@ from multi_query_rag.connect import connect
 from multi_query_rag.db import (
     enable_pgvector,
     create_vector_table,
-    drop_table,
     process_csv_to_vector,
 )
 
@@ -24,9 +23,6 @@ def main():
     # Create vector table
     create_vector_table(cur, conn)
 
-    # Process the CSV file and insert data into the database
-    drop_table(cur, conn)
-    create_vector_table(cur, conn)
     process_csv_to_vector("mock_patient_reports.csv", cur, conn)
 
     # Close cursor and connection
