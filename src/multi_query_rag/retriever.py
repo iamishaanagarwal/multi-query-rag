@@ -1,9 +1,7 @@
 from openai import OpenAI
 from config import load_config
-from typing import Dict, Any
 from connect import connect
-from psycopg2.extensions import connection, cursor
-from db import chunk_text
+from psycopg2.extensions import cursor
 import os
 from dotenv import load_dotenv, find_dotenv
 

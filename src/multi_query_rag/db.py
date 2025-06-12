@@ -1,12 +1,12 @@
+from typing import Any, Dict, Optional
 import pandas as pd
-from connect import connect
 from config import load_config
 from openai import OpenAI
-from psycopg2 import sql
 from psycopg2.extensions import connection, cursor
-from typing import Dict, Any, Optional
 import os
 from dotenv import load_dotenv, find_dotenv
+
+from connect import connect
 
 if not os.environ.get("OPENAI_API_KEY"):
     load_dotenv(find_dotenv())

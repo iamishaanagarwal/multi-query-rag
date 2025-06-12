@@ -1,10 +1,10 @@
+from config import load_config
+from connect import connect
 from retriever import get_context, generate_answer
-from connect import connect, load_config
 from dotenv import load_dotenv, find_dotenv
 
 
 load_dotenv(find_dotenv())
-
 
 
 def main():
