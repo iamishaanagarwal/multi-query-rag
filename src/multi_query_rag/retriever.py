@@ -117,10 +117,10 @@ class Retriever:
         return answer if answer else "No answer generated"
 
     def get_section_output(self, section: SectionQuery) -> str:
-        prompt = f'''You are a helpful assistant being used as a summarizing expert for getting the summary for each section that will be used for creating medical discharge report, you will be presented with a series of qna based on which you have to create a summary for {section["section_name"]}'''
+        prompt = f'''You are a helpful assistant being used as a summarizing expert for getting the summary for each section that will be used for creating medical discharge report, you will be presented with a series of questions and context based on which you have to create a summary for {section["section_name"]}'''
         for query in section["queries"]:
-            answer = self.get_subsection_output(query)
-            prompt += f'\n\nQ: {query}\nA: {answer if answer else "No answer generated"}'
+            context = self.get_context(query)
+            prompt += f'\n\nQuestion: {query}\nContext: {context if context else "No context available"}'
         prompt += '\n\nPlease provide a concise and informative summary based on the above questions and answers. The summary should be relevant to the section and should not include any personal information about the patient. It should be written in a professional and medical tone, suitable for a discharge report.'
         
         output = self.generate_answer(
