@@ -1,6 +1,6 @@
 from multi_query_rag.config import load_config
 from multi_query_rag.connect import connect
-from multi_query_rag.retriever import get_context, generate_answer
+from multi_query_rag.retriever import Retriever
 from dotenv import load_dotenv, find_dotenv
 
 
@@ -18,20 +18,15 @@ def main():
     cur = conn.cursor()
 
     # Example query
-    query = "Generate a discharge summary for Chloe Fernandez."
+    query = "Generate a discharge summary this patient's medical report."
+    patient_id = 3  # Example patient ID, adjust as needed
 
     # Retrieve context from the database
-    context = get_context(cur, query)
-
-    if not context:
-        print("No relevant context found for the query.")
-        return
-
-    # print(f"Retrieved context:\n{context}\n")
-
-    # Generate answer using OpenAI
-    answer = generate_answer(context, query)
-    print(f"Generated answer: {answer}")
+    retriever = Retriever(cur, patient_id)
+    summaries = retriever.generate_discharge_summary()
+    print("Generated Discharge Summary:")
+    for section_name, summary in summaries.items():
+        print(f"\nSection: {section_name}\nSummary: {summary}")
 
     # Close cursor and connection
     cur.close()

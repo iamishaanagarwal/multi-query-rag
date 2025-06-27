@@ -1,0 +1,78 @@
+[
+  {
+    "section_name": "history of present illness",
+    "queries": [
+      "When did the patient's symptoms begin?",
+      "What type of symptoms did the patient experience?",
+      "How have the symptoms progressed or changed over time?",
+      "Were there any other associated symptoms?",
+      "What relevant events preceded the symptoms?",
+      "What treatments did the patient receive before admission?"
+    ]
+  },
+  {
+    "section_name": "admission",
+    "queries": [
+      "What was the primary reason for the patient's admission?",
+      "Was the admission due to worsening condition or need for specialized care?"
+    ]
+  },
+  {
+    "section_name": "physical exam",
+    "queries": [
+      "What was the patient's general appearance upon examination?",
+      "What were the patient's vital signs?",
+      "What were the significant findings from systemic examinations?",
+      "Were there any specific positive signs noted during physical exam?"
+    ]
+  },
+  {
+    "section_name": "procedures",
+    "queries": [
+      "What diagnostic procedures were performed and what were their results?",
+      "What therapeutic interventions or surgeries were carried out?",
+      "What medications were initiated during hospital stay?"
+    ]
+  },
+  {
+    "section_name": "course",
+    "queries": [
+      "How did the patient respond to the initiated treatments?",
+      "Were there any major events or complications during hospitalization?",
+      "What was the overall progress during the stay?",
+      "What changes were made to treatment plan during stay?"
+    ]
+  },
+  {
+    "section_name": "diagnosis",
+    "queries": [
+      "What is the patient's primary diagnosis?",
+      "Are there any secondary or associated conditions?"
+    ]
+  },
+  {
+    "section_name": "discharge condition",
+    "queries": [
+      "Was the patient's condition stable or unstable at discharge?",
+      "Were there any residual symptoms at discharge?",
+      "Is ongoing treatment required after discharge?"
+    ]
+  },
+  {
+    "section_name": "discharge advice",
+    "queries": [
+      "What medications were prescribed for home use?",
+      "What dietary advice was provided?",
+      "What activity level was recommended?",
+      "What warning signs should prompt return to hospital?"
+    ]
+  },
+  {
+    "section_name": "follow up",
+    "queries": [
+      "When is the patient's next appointment and with which department?",
+      "What labs or imaging should the patient bring to follow up?",
+      "What are the specific goals of the follow up appointment?"
+    ]
+  }
+]

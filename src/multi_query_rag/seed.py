@@ -4,6 +4,7 @@ from multi_query_rag.db import (
     enable_pgvector,
     create_vector_table,
     process_csv_to_vector,
+    drop_table,
 )
 
 
@@ -19,6 +20,8 @@ def main():
 
     # Enable pgvector extension
     enable_pgvector(cur, conn)
+
+    drop_table(cur, conn)
 
     # Create vector table
     create_vector_table(cur, conn)
