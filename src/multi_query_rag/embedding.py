@@ -50,15 +50,15 @@ def get_embedding(
         if additional_data:
             text_to_embed = f"patient id: {additional_data.get('patient_id', '')} patient name: {additional_data.get('patient_name', '')} {text}"
         chunks = chunk_text(text_to_embed, chunk_size, overlap)
-        embeddings = []
+        result = []
         
 
         for i, chunk in enumerate(chunks):
             embedding = model.encode(chunk)
-            embeddings.append(embedding.tolist())  # Convert numpy array to list
+            result.append((chunk, embedding.tolist()))  # Convert numpy array to list
             print(f"Generated embedding for chunk {i+1}/{len(chunks)}")
 
-        return embeddings
+        return result
     except Exception as e:
         print(f"Error getting embedding: {e}")
         return None

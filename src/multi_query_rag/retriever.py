@@ -1,5 +1,4 @@
 import json
-import re
 from typing import Dict, List, TypedDict
 from openai import OpenAI
 from multi_query_rag.config import load_config
@@ -86,7 +85,7 @@ class Retriever:
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a medical assistant. Your task is to generate concise and informative answers based on the provided context and user queries. Ensure that your responses are relevant to the medical domain and maintain a professional tone. If the context is insufficient or not relevant, return 0.",
+                    "content": "You are a medical assistant. Your task is to generate concise and informative answers based on the provided context and user queries. Ensure that your responses are relevant to the medical domain and maintain a professional tone. The answers should be in plain text format.",
                 },
                 {"role": "user", "content": f"Context: {context}\n\nQuery: {query}"},
             ],

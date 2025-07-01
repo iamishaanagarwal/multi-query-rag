@@ -84,13 +84,11 @@ def process_csv_to_vector(file_path: str, cur: cursor, conn: connection) -> None
             )
 
             if embeddings:
-                # Get chunks once to avoid recalculating
-                chunks = chunk_text(report_text)
 
                 # Insert each chunk as a separate row
-                for chunk_idx, embedding in enumerate(embeddings):
+                for chunk_idx, (chunk_text_content, embedding) in enumerate(embeddings):
                     chunk_text_content = (
-                        chunks[chunk_idx] if chunk_idx < len(chunks) else ""
+                        chunk_text_content if chunk_idx < len(embeddings) else ""
                     )
 
                     cur.execute(
